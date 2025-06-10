@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Calculator</name>
+    </assembly>
+    <members>
+        <member name="T:Calculator.ViewModels.CalculatorViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.BillAmount">
+            <inheritdoc cref="F:Calculator.ViewModels.CalculatorViewModel.billAmount"/>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.TipPercentage">
+            <inheritdoc cref="F:Calculator.ViewModels.CalculatorViewModel.tipPercentage"/>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.NumberOfPeople">
+            <inheritdoc cref="F:Calculator.ViewModels.CalculatorViewModel.numberOfPeople"/>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.TotalPerPerson">
+            <inheritdoc cref="F:Calculator.ViewModels.CalculatorViewModel.totalPerPerson"/>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.SubtotalPerPerson">
+            <inheritdoc cref="F:Calculator.ViewModels.CalculatorViewModel.subtotalPerPerson"/>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.TipPerPerson">
+            <inheritdoc cref="F:Calculator.ViewModels.CalculatorViewModel.tipPerPerson"/>
+        </member>
+        <member name="M:Calculator.ViewModels.CalculatorViewModel.OnBillAmountChanged(System.Double)">
+            <summary>Executes the logic for when <see cref="P:Calculator.ViewModels.CalculatorViewModel.BillAmount"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Calculator.ViewModels.CalculatorViewModel.BillAmount"/> is changed.</remarks>
+        </member>
+        <member name="M:Calculator.ViewModels.CalculatorViewModel.OnTipPercentageChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:Calculator.ViewModels.CalculatorViewModel.TipPercentage"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Calculator.ViewModels.CalculatorViewModel.TipPercentage"/> is changed.</remarks>
+        </member>
+        <member name="M:Calculator.ViewModels.CalculatorViewModel.OnNumberOfPeopleChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:Calculator.ViewModels.CalculatorViewModel.NumberOfPeople"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Calculator.ViewModels.CalculatorViewModel.NumberOfPeople"/> is changed.</remarks>
+        </member>
+        <member name="F:Calculator.ViewModels.CalculatorViewModel.setTipCommand">
+            <summary>The backing field for <see cref="P:Calculator.ViewModels.CalculatorViewModel.SetTipCommand"/>.</summary>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.SetTipCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Calculator.ViewModels.CalculatorViewModel.SetTip(System.String)"/>.</summary>
+        </member>
+        <member name="F:Calculator.ViewModels.CalculatorViewModel.incrementPeopleCommand">
+            <summary>The backing field for <see cref="P:Calculator.ViewModels.CalculatorViewModel.IncrementPeopleCommand"/>.</summary>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.IncrementPeopleCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Calculator.ViewModels.CalculatorViewModel.IncrementPeople"/>.</summary>
+        </member>
+        <member name="F:Calculator.ViewModels.CalculatorViewModel.decrementPeopleCommand">
+            <summary>The backing field for <see cref="P:Calculator.ViewModels.CalculatorViewModel.DecrementPeopleCommand"/>.</summary>
+        </member>
+        <member name="P:Calculator.ViewModels.CalculatorViewModel.DecrementPeopleCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Calculator.ViewModels.CalculatorViewModel.DecrementPeople"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BillAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BillAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TipPercentage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TipPercentage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NumberOfPeople">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NumberOfPeople" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalPerPerson">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalPerPerson" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SubtotalPerPerson">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SubtotalPerPerson" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TipPerPerson">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TipPerPerson" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BillAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BillAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TipPercentage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TipPercentage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NumberOfPeople">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NumberOfPeople" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalPerPerson">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalPerPerson" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SubtotalPerPerson">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SubtotalPerPerson" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TipPerPerson">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TipPerPerson" generated properties.</summary>
+        </member>
+    </members>
+</doc>

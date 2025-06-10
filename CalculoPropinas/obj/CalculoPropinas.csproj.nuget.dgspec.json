@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\OneDrive\\Desktop\\Proyecto2\\CalculoPropinas\\CalculoPropinas.csproj": {}
+    "C:\\Users\\javie\\OneDrive\\Escritorio\\appmoviles2\\Proyecto2AppMoviles\\CalculoPropinas\\CalculoPropinas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\OneDrive\\Desktop\\Proyecto2\\CalculoPropinas\\CalculoPropinas.csproj": {
+    "C:\\Users\\javie\\OneDrive\\Escritorio\\appmoviles2\\Proyecto2AppMoviles\\CalculoPropinas\\CalculoPropinas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Desktop\\Proyecto2\\CalculoPropinas\\CalculoPropinas.csproj",
+        "projectUniqueName": "C:\\Users\\javie\\OneDrive\\Escritorio\\appmoviles2\\Proyecto2AppMoviles\\CalculoPropinas\\CalculoPropinas.csproj",
         "projectName": "CalculoPropinas",
-        "projectPath": "C:\\Users\\franc\\OneDrive\\Desktop\\Proyecto2\\CalculoPropinas\\CalculoPropinas.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\OneDrive\\Desktop\\Proyecto2\\CalculoPropinas\\obj\\",
+        "projectPath": "C:\\Users\\javie\\OneDrive\\Escritorio\\appmoviles2\\Proyecto2AppMoviles\\CalculoPropinas\\CalculoPropinas.csproj",
+        "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\javie\\OneDrive\\Escritorio\\appmoviles2\\Proyecto2AppMoviles\\CalculoPropinas\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-android",

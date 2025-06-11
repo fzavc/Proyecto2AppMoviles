@@ -4,83 +4,74 @@ using System.ComponentModel;
 
 namespace Calculator.ViewModels
 {
-    
     public partial class CalculatorViewModel : ObservableObject
     {
         [ObservableProperty]
-        private double billAmount;
+        private double montoDeLaCuenta;
 
         [ObservableProperty]
-        private int tipPercentage;
+        private int porcentajeDePropina;
 
         [ObservableProperty]
-        private int numberOfPeople = 1; 
-      
-        [ObservableProperty]
-        private double totalPerPerson;
+        private int cantidadDePersonas = 1;
 
         [ObservableProperty]
-        private double subtotalPerPerson;
+        private double totalPorPersona;
 
         [ObservableProperty]
-        private double tipPerPerson;
+        private double subtotalPorPersona;
+
+        [ObservableProperty]
+        private double propinaPorPersona;
         
         public CalculatorViewModel()
         {
-          
-          
-
-            TipPercentage = 10;
+            PorcentajeDePropina = 10;
         }
-
-     
-        private void CalculateTotals()
+        
+        private void CalcularTodoDeNuevo()
         {
-   
-            if (NumberOfPeople <= 0)
+            if (CantidadDePersonas <= 0)
             {
-                TotalPerPerson = 0;
-                SubtotalPerPerson = 0;
-                TipPerPerson = 0;
+                TotalPorPersona = 0;
+                SubtotalPorPersona = 0;
+                PropinaPorPersona = 0;
                 return;
             }
 
-            var totalTip = BillAmount * (TipPercentage / 100.0);
-            var totalBill = BillAmount + totalTip;
+            var propinaTotal = MontoDeLaCuenta * (PorcentajeDePropina / 100.0);
+            var cuentaTotal = MontoDeLaCuenta + propinaTotal;
 
-            SubtotalPerPerson = BillAmount / NumberOfPeople;
-            TipPerPerson = totalTip / NumberOfPeople;
-            TotalPerPerson = totalBill / NumberOfPeople;
+            SubtotalPorPersona = MontoDeLaCuenta / CantidadDePersonas;
+            PropinaPorPersona = propinaTotal / CantidadDePersonas;
+            TotalPorPersona = cuentaTotal / CantidadDePersonas;
         }
-
-      
-        partial void OnBillAmountChanged(double value) => CalculateTotals();
-        partial void OnTipPercentageChanged(int value) => CalculateTotals();
-        partial void OnNumberOfPeopleChanged(int value) => CalculateTotals();
+        
+        partial void OnMontoDeLaCuentaChanged(double value) => CalcularTodoDeNuevo();
+        partial void OnPorcentajeDePropinaChanged(int value) => CalcularTodoDeNuevo();
+        partial void OnCantidadDePersonasChanged(int value) => CalcularTodoDeNuevo();
 
         [RelayCommand]
-        private void SetTip(string percentage)
+        private void FijarPropina(string porcentaje)
         {
-            if (int.TryParse(percentage, out int tip))
+            if (int.TryParse(porcentaje, out int nuevoPorcentaje))
             {
-                
-                TipPercentage = tip;
+                PorcentajeDePropina = nuevoPorcentaje;
             }
         }
 
         [RelayCommand]
-        private void IncrementPeople()
+        private void AgregarPersona()
         {
-            NumberOfPeople++;
+            CantidadDePersonas++;
         }
 
         [RelayCommand]
-        private void DecrementPeople()
+        private void QuitarPersona()
         {
-
-            if (NumberOfPeople > 1)
+            if (CantidadDePersonas > 1)
             {
-                NumberOfPeople--;
+                CantidadDePersonas--;
             }
         }
     }

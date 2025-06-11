@@ -1,5 +1,4 @@
-﻿
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:Calculator.ViewModels"
              x:Class="Calculator.MainPage"
@@ -23,50 +22,43 @@
 
                 <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
                     <Label Text="TOTAL P/PERSONA" TextColor="{StaticResource Primary}" FontSize="Medium" />
-                    
-                    <Label Text="{Binding TotalPerPerson, StringFormat='{0:N0}'}" TextColor="White" FontSize="48" FontAttributes="Bold" />
+                    <Label Text="{Binding TotalPorPersona, StringFormat='{0:N0}'}" TextColor="White" FontSize="48" FontAttributes="Bold" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Grid.Column="1" Spacing="5" VerticalOptions="Center">
                     <Label Text="SUBTOTAL" TextColor="White" FontSize="Small" HorizontalTextAlignment="End"/>
-                    <Label Text="{Binding SubtotalPerPerson, StringFormat='{0:N0}'}" TextColor="White" FontSize="Small" HorizontalTextAlignment="End"/>
+                    <Label Text="{Binding SubtotalPorPersona, StringFormat='{0:N0}'}" TextColor="White" FontSize="Small" HorizontalTextAlignment="End"/>
                     <Label Text="PROPINA" TextColor="White" FontSize="Small" HorizontalTextAlignment="End"/>
-                    <Label Text="{Binding TipPerPerson, StringFormat='{0:N0}'}" TextColor="White" FontSize="Small" HorizontalTextAlignment="End"/>
+                    <Label Text="{Binding PropinaPorPersona, StringFormat='{0:N0}'}" TextColor="White" FontSize="Small" HorizontalTextAlignment="End"/>
                 </VerticalStackLayout>
             </Grid>
         </Frame>
 
-
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Spacing="20">
-
-  
+                
                 <Label Text="Valor Boleta:" TextColor="{StaticResource Primary}" />
                 <Entry Placeholder="150000" 
                        Keyboard="Numeric" 
-                       Text="{Binding BillAmount}" />
-
-              
+                       Text="{Binding MontoDeLaCuenta}" />
+                
                 <Label Text="Elige Propina" TextColor="{StaticResource Primary}"/>
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="FillAndExpand">
-                  
-                    <Button Text="10%" Command="{Binding SetTipCommand}" CommandParameter="10" HorizontalOptions="FillAndExpand" />
-                    <Button Text="15%" Command="{Binding SetTipCommand}" CommandParameter="15" HorizontalOptions="FillAndExpand" />
-                    <Button Text="20%" Command="{Binding SetTipCommand}" CommandParameter="20" HorizontalOptions="FillAndExpand" />
+                    <Button Text="10%" Command="{Binding FijarPropinaCommand}" CommandParameter="10" HorizontalOptions="FillAndExpand" />
+                    <Button Text="15%" Command="{Binding FijarPropinaCommand}" CommandParameter="15" HorizontalOptions="FillAndExpand" />
+                    <Button Text="20%" Command="{Binding FijarPropinaCommand}" CommandParameter="20" HorizontalOptions="FillAndExpand" />
                 </HorizontalStackLayout>
-
-              
-                <Label Text="{Binding TipPercentage, StringFormat='Propina: {0:F0}%'}" TextColor="{StaticResource Primary}"/>
+                
+                <Label Text="{Binding PorcentajeDePropina, StringFormat='Propina: {0:F0}%'}" TextColor="{StaticResource Primary}"/>
                 <Slider Minimum="0" 
                         Maximum="50" 
-                        Value="{Binding TipPercentage}" />
-
-              
+                        Value="{Binding PorcentajeDePropina}" />
+                
                 <Label Text="Dividir el Total" TextColor="{StaticResource Primary}"/>
                 <Grid ColumnDefinitions="*, Auto, *" ColumnSpacing="10">
-                    <Button Grid.Column="0" Text="-" Command="{Binding DecrementPeopleCommand}" />
-                    <Label Grid.Column="1" Text="{Binding NumberOfPeople}" FontSize="Large" VerticalOptions="Center" />
-                    <Button Grid.Column="2" Text="+" Command="{Binding IncrementPeopleCommand}" />
+                    <Button Grid.Column="0" Text="-" Command="{Binding QuitarPersonaCommand}" />
+                    <Label Grid.Column="1" Text="{Binding CantidadDePersonas}" FontSize="Large" VerticalOptions="Center" />
+                    <Button Grid.Column="2" Text="+" Command="{Binding AgregarPersonaCommand}" />
                 </Grid>
 
             </VerticalStackLayout>

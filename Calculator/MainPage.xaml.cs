@@ -1,5 +1,4 @@
-﻿// /MainPage.xaml.cs
-namespace Calculator
+﻿namespace Calculator
 {
     public partial class MainPage : ContentPage
     {
